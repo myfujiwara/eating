@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image: MyString
+  profile: MyText
+  score: 1.5
+  reputation: MyText
+
+two:
+  name: MyString
+  image: MyString
+  profile: MyText
+  score: 1.5
+  reputation: MyText
