@@ -1,0 +1,13 @@
+<h3>プロフィール</h3>
+
+<% if @user.id == current_user.id %>
+  <% link_to '編集する', edit_user_path(@user) %>
+<% end %>
+
+<%= @user.name %>
+<div class="image">
+ <div style="background: url('<%= image_url(@user) %>'); background-position: 50%; background-size: cover;"></div>
+</div>
+<%= @user.profile %>
+<%= @user.score %>
+<%= @user.reputation %>

@@ -4,12 +4,22 @@
     <title>Eating</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <header class='global_header'>
+      <%= link_to '投稿', new_post_path %>
+    </header>
   </head>
 
   <body>
+    <% flash.each do |key, value| %>
+      <p class = 'alert alert-<%= key %>'><%= value %></p>
+    <% end %>
     <%= yield %>
+    <script>
+      $(function(){
+        $('.alert').slideUp(3000);
+      });
+    </script>
   </body>
 </html>

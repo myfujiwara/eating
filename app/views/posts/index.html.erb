@@ -1,0 +1,11 @@
+<% if @posts.any? %>
+  <% @posts.each do |post| %>
+    <ul>
+      <li><%= link_to post.title, show_post_path %></li>
+      <li><%= link_to post.user.image, show_user_path %></li>
+      <li><%= link_to post.user.name, show_user_path %></li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>食べて！はありません…</p>
+<% end %>

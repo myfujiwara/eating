@@ -1,0 +1,18 @@
+<% if @posts.any? %>
+  <% @posts.each do |post| %>
+    <ul>
+      <li><%= post.title %></li>
+      <!-- お気に入りボタン -->
+      <li><%= link_to post.user.image, show_user_path %></li>
+      <li><%= link_to post.user.name, show_user_path %></li>
+      <li><%= post.price %></li>
+      <li><%= post.description %></li>
+      <li><%= post.requirement %></li>
+        <div class = "button_wrap">
+          <%= button_to "食べる！", "/top" %>
+        </div>
+    </ul>
+  <% end %>
+<% else %>
+  <p>投稿はありません</p>
+<% end %>

@@ -1,0 +1,14 @@
+<% if @posts.any? %>
+  <%= @post.each do |post| %>
+    <ul>
+      <%= link_to post_path do %>
+        <li><%= post_image.image %></li>
+      <% end %>
+      <li><%= link_to post.title, post_path %></li>
+      <li><%= link_to user.image, user_path %></li>
+      <li><%= link_to user.name, user_path %></li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>食べたいはありません…</p>
+<% end %>

@@ -1,0 +1,17 @@
+<% form_for(@user) do |f| %>
+  <div class="field">
+    <%= f.label :"画像" %>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :"名前" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :"プロフィール" %>
+    <%= f.text_field :profile %>
+  </div>
+  <div class="actions">
+    <%= f.submit "編集する" %>
+  </div>
+<% end %>

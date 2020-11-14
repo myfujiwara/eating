@@ -1,0 +1,15 @@
+.alert{
+  color: white;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  &-success{
+    background-color: #2d8ad6;
+  }
+  &-danger{
+    background-color: #ff2803;
+  }
+}

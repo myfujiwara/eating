@@ -1,0 +1,25 @@
+<%= form_for(@post) do |f| %>
+  <div class="field">
+    <%= f.label "画像をアップロード" %>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :"タイトル" %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :"値段" %>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :"説明" %>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :"こんな人に食べてもらいたい！" %>
+    <%= f.text_field :requirement %>
+  </div>
+  <div class="actions">
+    <%= f.submit "登録する" %>
+  </div>
+<% end %>
